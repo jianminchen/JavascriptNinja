@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+
+        Object.prototype.keys = function () {
+            var keys = [];
+            for (var i in this)
+                keys.push(i);
+            return keys;
+        };
+
+        var obj = { a: 1, b: 2, c: 3 };
+
+        assert(obj.keys().length == 3, "We should only have 3 properties.");
+
+        delete Object.prototype.keys;
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
